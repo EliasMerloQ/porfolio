@@ -92,10 +92,10 @@ const Contact: React.FC = () => {
                       Email
                     </h4>
                     <a 
-                      href="mailto:hello@example.com" 
+                      href="mailto:elias.q.merlo@gmail.com" 
                       className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
                     >
-                      hello@example.com
+                      elias.q.merlo@gmail.com
                     </a>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ const Contact: React.FC = () => {
                       Location
                     </h4>
                     <p className="text-gray-600 dark:text-gray-300">
-                      San Francisco, California
+                      Buenos Aires, Argentina
                     </p>
                   </div>
                 </div>
@@ -138,7 +138,7 @@ const Contact: React.FC = () => {
                 </h4>
                 <div className="flex space-x-4">
                   <a 
-                    href="https://github.com"
+                    href="https://github.com/EliasMerloQ"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-gray-200 dark:bg-gray-600 rounded-full hover:bg-blue-600 dark:hover:bg-blue-500 hover:text-white transition-colors duration-300"
@@ -211,7 +211,7 @@ const Contact: React.FC = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                      placeholder="John Doe"
+                      placeholder="Elias Merlo"
                     />
                   </div>
                   

@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
               Hello, my name is
             </h2>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white animate-slideUp">
-              John Doe
+              Elias Merlo
             </h1>
             <div className="flex justify-center md:justify-start items-center text-gray-700 dark:text-gray-300 text-xl md:text-2xl font-medium animate-slideUp animation-delay-200">
               <span>I'm a </span>
@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
           
           <div className="mt-10 flex items-center justify-center md:justify-start space-x-6 animate-fadeIn animation-delay-800">
             <a
-              href="https://github.com"
+              href="https://github.com/EliasMerloQ"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"

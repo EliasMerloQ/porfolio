@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
                 <li>
                   <a 
-                    href="https://github.com" 
+                    href="https://github.com/EliasMerloQ" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
                 </li>
                 <li>
                   <a 
-                    href="mailto:hello@example.com" 
+                    href="mailto:elias.q.merlo@gmail.com" 
                     className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
                   >
                     Email
@@ -112,7 +112,7 @@ const Footer: React.FC = () => {
         
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} John Doe. All rights reserved.
+            &copy; {new Date().getFullYear()} Elias Merlo. All rights reserved.
           </p>
           
           <button
