@@ -69,6 +69,33 @@ const Hero: React.FC = () => {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white animate-slideUp">
                   Elias Merlo
                 </h1>
+
+                {/* Profile photo - Mobile only (right after h1) */}
+                <div className="md:hidden flex justify-center my-6 animate-fadeIn animation-delay-400">
+                  <div className="relative group">
+                    <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-500/20 dark:border-blue-400/20 shadow-2xl transition-all duration-300 group-hover:border-blue-500/40 dark:group-hover:border-blue-400/40 group-hover:shadow-3xl group-hover:scale-105">
+                      <img 
+                        src="" 
+                        alt="Elias Merlo"
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          if (e.currentTarget.nextElementSibling) {
+                            (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'flex';
+                          }
+                        }}
+                      />
+                      <div 
+                        className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-600 dark:to-blue-700 flex items-center justify-center text-white font-bold text-5xl"
+                        style={{ display: 'flex' }}
+                      >
+                        EM
+                      </div>
+                    </div>
+                    <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 via-teal-500 to-blue-500 rounded-full opacity-0 group-hover:opacity-30 blur-lg transition-all duration-500 animate-pulse"></div>
+                  </div>
+                </div>
+
                 <div className="flex justify-center md:justify-start items-center text-gray-700 dark:text-gray-300 text-xl md:text-2xl font-medium animate-slideUp animation-delay-200">
                   <span>I'm a </span>
                   <span ref={typingRef} className="text-blue-600 dark:text-blue-400 ml-2 min-w-40 inline-block"></span>
@@ -125,23 +152,20 @@ const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* Right side - Profile photo */}
-            <div className="relative group animate-fadeIn animation-delay-400">
+            {/* Right side - Profile photo (Desktop only) */}
+            <div className="hidden md:block relative group animate-fadeIn animation-delay-400">
               <div className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-blue-500/20 dark:border-blue-400/20 shadow-2xl transition-all duration-300 group-hover:border-blue-500/40 dark:group-hover:border-blue-400/40 group-hover:shadow-3xl group-hover:scale-105">
-                {/* Replace the src below with your photo path, e.g., "/images/profile.jpg" or import it */}
                 <img 
                   src="" 
                   alt="Elias Merlo"
                   className="w-full h-full object-cover"
                   onError={(e) => {
-                    // Fallback to initials if image fails to load
                     e.currentTarget.style.display = 'none';
                     if (e.currentTarget.nextElementSibling) {
                       (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'flex';
                     }
                   }}
                 />
-                {/* Fallback initials - shown if image fails to load */}
                 <div 
                   className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-600 dark:to-blue-700 flex items-center justify-center text-white font-bold text-6xl md:text-7xl lg:text-8xl"
                   style={{ display: 'flex' }}
@@ -149,7 +173,6 @@ const Hero: React.FC = () => {
                   EM
                 </div>
               </div>
-              {/* Decorative ring animation */}
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 via-teal-500 to-blue-500 rounded-full opacity-0 group-hover:opacity-30 blur-lg transition-all duration-500 animate-pulse"></div>
             </div>
           </div>

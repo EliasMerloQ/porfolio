@@ -1,28 +1,68 @@
 import React from 'react';
 import { Code, Server, Palette, Database, Globe } from 'lucide-react';
+import { 
+  SiReact, SiTypescript, SiNextdotjs, SiTailwindcss, SiRedux, SiHtml5,
+  SiNodedotjs, SiExpress, SiNestjs, SiPython, SiDjango,
+  SiMongodb, SiPostgresql, SiMysql, SiFirebase, SiRedis, SiSupabase,
+  SiFigma, SiGit, SiDocker, SiJest, SiWebpack, SiAstro, SiGithub,SiGitlab, SiKubernetes,
+} from 'react-icons/si';
+import { LiaJava } from 'react-icons/lia';
 
 const About: React.FC = () => {
-  // Skills data
+  // Skills data with icons
   const skills = [
     {
       category: 'Frontend',
       icon: <Code className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
-      technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Redux', 'HTML/CSS']
+      technologies: [
+        { name: 'React', icon: <SiReact className="w-4 h-4" /> },
+        { name: 'TypeScript', icon: <SiTypescript className="w-4 h-4" /> },
+        { name: 'Next.js', icon: <SiNextdotjs className="w-4 h-4" /> },
+        {name: 'Astro', icon: <SiAstro className="w-4 h-4" /> },
+        { name: 'Tailwind CSS', icon: <SiTailwindcss className="w-4 h-4" /> },
+        { name: 'Redux', icon: <SiRedux className="w-4 h-4" /> },
+        { name: 'HTML/CSS', icon: <SiHtml5 className="w-4 h-4" /> }
+      ]
     },
     {
       category: 'Backend',
       icon: <Server className="w-6 h-6 text-teal-600 dark:text-teal-400" />,
-      technologies: ['Node.js', 'Express', 'NestJS', 'Python', 'Django', 'REST APIs']
+      technologies: [
+        { name: 'Node.js', icon: <SiNodedotjs className="w-4 h-4" /> },
+        { name: 'Express', icon: <SiExpress className="w-4 h-4" /> },
+        { name: 'NestJS', icon: <SiNestjs className="w-4 h-4" /> },
+        { name: 'Python', icon: <SiPython className="w-4 h-4" /> },
+        {name: 'Java', icon: <LiaJava className="w-4 h-4" /> },
+        { name: 'Django', icon: <SiDjango className="w-4 h-4" /> },
+        { name: 'REST APIs', icon: <Server className="w-4 h-4" /> }
+      ]
     },
     {
       category: 'Database',
       icon: <Database className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />,
-      technologies: ['MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'Redis']
+      technologies: [
+        { name: 'MongoDB', icon: <SiMongodb className="w-4 h-4" /> },
+        { name: 'PostgreSQL', icon: <SiPostgresql className="w-4 h-4" /> },
+        { name: 'MySQL', icon: <SiMysql className="w-4 h-4" /> },
+        { name: 'Firebase', icon: <SiFirebase className="w-4 h-4" /> },
+        { name: 'Redis', icon: <SiRedis className="w-4 h-4" /> },
+        { name: 'Supabase', icon: <SiSupabase className="w-4 h-4" /> }
+      ]
     },
     {
       category: 'Design & Tools',
       icon: <Palette className="w-6 h-6 text-purple-600 dark:text-purple-400" />,
-      technologies: ['Figma', 'Git', 'Docker', 'Jest', 'CI/CD', 'Webpack']
+      technologies: [
+        { name: 'Figma', icon: <SiFigma className="w-4 h-4" /> },
+        { name: 'Git', icon: <SiGit className="w-4 h-4" /> },
+        { name: 'Github', icon: <SiGithub className="w-4 h-4" /> },
+        {name: 'Gitlab', icon: <SiGitlab className="w-4 h-4" /> },
+        { name: 'Docker', icon: <SiDocker className="w-4 h-4" /> },
+        {name: 'Kubernetes', icon: <SiKubernetes className="w-4 h-4" /> },
+        { name: 'Jest', icon: <SiJest className="w-4 h-4" /> },
+        { name: 'CI/CD', icon: <Code className="w-4 h-4" /> },
+        { name: 'Webpack', icon: <SiWebpack className="w-4 h-4" /> }
+      ]
     }
   ];
 
@@ -94,9 +134,10 @@ const About: React.FC = () => {
                     {skillGroup.technologies.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="px-3 py-1 text-sm bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full border border-gray-200 dark:border-gray-600"
+                        className="px-3 py-1.5 text-sm bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full border border-gray-200 dark:border-gray-600 flex items-center gap-1.5 hover:border-blue-500 dark:hover:border-blue-400 transition-colors duration-300"
                       >
-                        {tech}
+                        {tech.icon}
+                        {tech.name}
                       </span>
                     ))}
                   </div>
